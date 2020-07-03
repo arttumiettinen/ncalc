@@ -652,6 +652,15 @@ namespace NCalc.Tests
 
             Assert.AreEqual(3.6M, e.Evaluate());
         }
+
+        [TestMethod]
+        public void DotsInParameterNames()
+        {
+            var e = new Expression("var.bar + 1.5");
+            e.Parameters["var.bar"] = 2.0;
+
+            Assert.AreEqual(3.5, e.Evaluate());
+        }
     }
 }
 

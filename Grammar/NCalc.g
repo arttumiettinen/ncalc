@@ -243,7 +243,7 @@ FALSE
 	;
 			
 ID 
-	: 	LETTER (LETTER | DIGIT)*
+	: 	LETTER (LETTER | DIGIT | '.')*
 	;
 
 INTEGER
